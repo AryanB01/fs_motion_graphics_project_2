@@ -1,0 +1,151 @@
+@charset "utf-8";
+
+body { 
+	margin: 5em; 
+	padding: 0; 
+	font: 1em "Trebuchet MS", verdana, arial, sans-serif; font-size: 100%;
+	background-image: linear-gradient(#3d1c7a, #7a5fac);
+}
+
+div.container { 
+	margin: auto; 
+	width: 80%; 
+}
+
+h1 {
+	text-shadow: 0 1px 0 #483636;
+	color: white;
+	font-size: 4em;
+	text-align: center;
+	margin-bottom: 15px;
+	border-bottom: 1px solid #fff;
+	margin-bottom: 1em
+	
+}
+ul.tabNavigation {
+    list-style: none;
+    margin: 0 0 0 25px;
+    padding: 0;
+	text-align: center;
+}
+
+ul.tabNavigation li {
+    display: inline;
+	margin: 0;
+	font-size: 21px;
+}
+
+
+ul.tabNavigation li a {
+    padding: 10px 10px 0 10px;
+    background-color: #ddd;
+    color: #000;
+    text-decoration: none;
+	border: 1px solid #888;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	transition: .5s ease-in-out;
+	transition: transform .5s ease-in-out;
+	transition: .5s ease-in-out;
+}	
+
+
+ul.tabNavigation li a:hover{
+	margin: 10px;
+	font-size: 24px;
+	transform: translateX(20deg);
+	transition: .5s ease-in-out;
+}
+
+ul.tabNavigation li a.selected {
+	background-color: #b15cdb;
+    color: #fff;
+	border: none;
+	border-bottom: 1px solid #8a40af;
+	margin:5px;
+	box-shadow: 0 0 5px #fff;
+}
+	
+ul.tabNavigation li a:focus {
+	outline: 0;
+}
+
+div.tabs > div {
+	padding: 25px;
+	border: 1px solid #888;
+    background-color: #FFF;
+	border-radius: 5px;
+}
+
+div.tabs > div h2 {
+	margin-top: 0;
+	text-align: center;
+	border-bottom: 1px solid #8a40af;
+	margin-left: 1em;
+	margin-right: 1em;
+	color: #7a5fac;
+	font-size: 2.5em;
+	transition: transform .5s ease-in-out;
+	cursor: pointer;
+}
+
+div.tabs > div h2:hover{
+	transform: scale(1.1);
+	transition: .5s ease-in-out;
+}
+div.tabs > div > p{
+	padding:10px 30px 30px 30px;
+	font-size: 17px;
+	
+}
+.waste {
+	min-height: 1000px;
+}
+
+/* adding responsiveness for mobile users. With this the page is fully responsive in mobile with max width up to 576 and less  */
+@media only screen and (max-width: 576px) {
+	div.container { 
+		margin: auto; 
+		width: 80%; 
+	}
+	div.tabs{
+		display: flex;
+		flex-direction: column;
+		margin: auto;
+		justify-content: center;
+		align-items: center;
+	}
+	h1{
+		font-size: 2em;
+	}
+	ul.tabNavigation{
+		text-align: start;
+		width: 400px;
+	}
+	
+	ul.tabNavigation li a{
+		font-size: 13px;
+		transition: transform .5s ease-in-out;
+		transition: .5s ease-in-out;
+	}
+	ul.tabNavigation li a:hover{
+		font-size: 14px;
+		transform: scale(1.1);
+		transition: .5s ease-in-out;
+	}
+	div.tabs div{
+		width: 400px;
+		height: auto;
+		margin: 1em;
+		margin-top: 0;
+		
+
+	}
+	div.tabs > div > h2{
+		font-size: 2em;
+	}
+	div.tabs > div > p{
+		font-size: 13px;
+		
+	}
+}
